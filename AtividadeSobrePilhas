@@ -1,0 +1,37 @@
+class Stack:
+    def __init__(self):
+        self.stack = []
+        
+    def stackEmpty(self):
+        self.stack = []
+    def verificationEmpty(self):
+        if self.stack == []:
+            print("pilha vazia")
+            return True
+        else:
+            print("Pilha nao esta vazia")
+            return False
+    def insertInStack(self, data):
+        self.stack.append(data)
+    def removeTopItem(self):
+        if len(self.stack) >= 1:
+            print(self.stack[-1])
+            self.stack.pop(-1)
+        else:
+            print("Nao ha elementos")
+    def size(self):
+        print(len(self.stack))
+        return len(self.stack)
+
+stack = Stack()
+stack.verificationEmpty()
+stack.insertInStack(5)
+stack.insertInStack(4)
+stack.insertInStack(3)
+stack.insertInStack(2)
+stack.insertInStack(1)
+stack.verificationEmpty()
+stack.removeTopItem()
+stack.size()
+stack.stackEmpty()
+stack.size()
